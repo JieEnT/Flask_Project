@@ -1,0 +1,11 @@
+Added bootstrap and customized styling. Split the html files.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Changes to be committed:
+#	modified:   flaskblog.py
+#	new file:   static/main.css
+#	modified:   templates/home.html
+#	modified:   templates/layout.html
+#
