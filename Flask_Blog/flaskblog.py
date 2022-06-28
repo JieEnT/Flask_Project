@@ -28,13 +28,12 @@ class User(db.Model):
     #         self.first_name = first_name
     #         self.last_name = last_name
     #         self.age = age
+    # def __repr__(self):
+    #     return f'Person("{self.first_name}","{self.last_name}",{self.age})'
 
     # person = Person("John", "Doe", 25)
     # print(repr(person))
     # Output: Person("John", "Doe", 25)
-
-    def __repr__(self):
-        return f'Person("{self.first_name}","{self.last_name}",{self.age})'
 
     def __repr__(self):
         return f"User('{self.username}', '{self.email}', '{self.image_file}')"
