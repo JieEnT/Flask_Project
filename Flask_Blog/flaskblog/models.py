@@ -1,8 +1,15 @@
 from datetime import datetime
-from flaskblog import db
+from flaskblog import db, login_manager
+#login_manager requires User to have certain attributes such as isAuthenticated, isActive, isAnonymous, getId
+#Class adds these attributes
+from flask_login import UserMixin
 
+#To get the user by id
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
-class User(db.Model):
+class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
